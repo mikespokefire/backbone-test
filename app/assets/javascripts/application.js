@@ -20,3 +20,11 @@
 //= require_tree ./collections
 //= require_tree ./views
 //= require_tree .
+//= require_self
+
+$(document).ready(function() {
+  var cards = new Cards();
+  var cardList = new CardsList({
+    collection: cards
+  });
+});
