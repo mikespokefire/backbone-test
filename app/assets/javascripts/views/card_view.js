@@ -3,7 +3,11 @@ var CardView = Backbone.View.extend({
   className: 'card',
 
   render: function() {
-    this.$el.text(this.model.get('name'));
+    var html = JST['templates/card']({
+      card: this.model
+    });
+    this.$el.html(html);
+
     return this;
   }
 });
